@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dol258blbto3k"]
+
+[ext_resource type="Script" uid="uid://puf7skgg3uh5" path="res://scripts/target.gd" id="1_b37e2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2b72u"]
+albedo_color = Color(1, 0.27, 0.27, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_b37e2"]
+material = SubResource("StandardMaterial3D_2b72u")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b37e2"]
+
+[node name="Target" type="Area3D"]
+collision_layer = 2
+script = ExtResource("1_b37e2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_b37e2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_b37e2")

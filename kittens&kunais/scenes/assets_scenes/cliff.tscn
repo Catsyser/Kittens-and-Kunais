@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b76b6hd5ngpxb"]
+
+[ext_resource type="PackedScene" uid="uid://dsmajm27wwj7g" path="res://assets/assets3D/cliff_blockSlope_rock.glb" id="1_3qelg"]
+
+[node name="Cliff" type="MeshInstance3D"]
+
+[node name="cliff_blockSlope_rock2" parent="." instance=ExtResource("1_3qelg")]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq4vlcbjls3uo"]
+
+[ext_resource type="PackedScene" uid="uid://cc8hict1ch0y" path="res://assets/assets3D/cliff_block_rock.glb" id="1_dakcw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yarb5"]
+
+[node name="Grass" type="StaticBody3D"]
+
+[node name="cliff_block_rock2" parent="." instance=ExtResource("1_dakcw")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4479, 0)
+shape = SubResource("BoxShape3D_yarb5")

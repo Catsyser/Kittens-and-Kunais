@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccpoym74pdtmg"]
+
+[ext_resource type="PackedScene" uid="uid://ds0sr01p64dxo" path="res://assets/assets3D/cliff_rock.glb" id="1_3clry"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hm13w"]
+size = Vector3(1, 1, 0.174316)
+
+[node name="Dirt" type="StaticBody3D"]
+
+[node name="cliff_rock2" parent="." instance=ExtResource("1_3clry")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.96755e-08, 0.450123, 0.412842)
+shape = SubResource("BoxShape3D_hm13w")

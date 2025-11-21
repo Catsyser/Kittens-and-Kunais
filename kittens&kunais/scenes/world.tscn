@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://f3k0ycng6ucl"]
+
+[ext_resource type="PackedScene" uid="uid://dq4vlcbjls3uo" path="res://scenes/assets_scenes/grass.tscn" id="1_nnsk1"]
+[ext_resource type="PackedScene" uid="uid://ccpoym74pdtmg" path="res://scenes/assets_scenes/dirt.tscn" id="1_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://b76b6hd5ngpxb" path="res://scenes/assets_scenes/cliff.tscn" id="3_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://g7et8e2ke104" path="res://scenes/assets_scenes/background.tscn" id="4_k0juu"]
+[ext_resource type="PackedScene" uid="uid://3fe38kiorb6v" path="res://scenes/assets_scenes/corner.tscn" id="5_71j4m"]
+[ext_resource type="PackedScene" uid="uid://t42aagtha7w5" path="res://scenes/assets_scenes/market.tscn" id="6_qfnet"]
+[ext_resource type="PackedScene" uid="uid://cwjbspnr0dvu6" path="res://scenes/assets_scenes/market2.tscn" id="7_i7141"]
+
+[node name="World" type="Node3D"]
+
+[node name="Dirt" parent="." instance=ExtResource("1_rwgxs")]
+transform = Transform3D(35, 0, 0, 0, -1.96701e-06, -20, 0, 45, -8.74228e-07, -0.11468, 11.4238, -52.4572)
+
+[node name="Grass_player" parent="." instance=ExtResource("1_nnsk1")]
+transform = Transform3D(35, 0, 0, 0, 5, 0, 0, 0, 30, 0, 0, 5.07695)
+
+[node name="Grass" parent="." instance=ExtResource("1_nnsk1")]
+transform = Transform3D(30, 0, 0, 0, 5, 0, 0, 0, 75, 32.3137, 0, -17.5803)
+
+[node name="Grass2" parent="." instance=ExtResource("1_nnsk1")]
+transform = Transform3D(30, 0, 0, 0, 5, 0, 0, 0, 75, -32.6545, 0, -17.5429)
+
+[node name="Cliff" parent="." instance=ExtResource("3_4wyf3")]
+transform = Transform3D(65, 0, 0, 0, -1.31134e-06, -30, 0, 30, -1.31134e-06, -0.354198, 17.988, -82.8226)
+
+[node name="Background" parent="." instance=ExtResource("4_k0juu")]
+transform = Transform3D(75, 0, 0, 0, 35, 0, 0, 0, 35, 0.254654, 6.14104, 36.9869)
+
+[node name="Cliff2" parent="." instance=ExtResource("3_4wyf3")]
+transform = Transform3D(-2.84124e-06, -30, 1.31134e-06, 0, -1.31134e-06, -30, 65, -1.31134e-06, 5.73206e-14, 67.4051, 17.988, -17.8392)
+
+[node name="Cliff3" parent="." instance=ExtResource("3_4wyf3")]
+transform = Transform3D(-2.84124e-06, 30, -1.31134e-06, 0, -1.31134e-06, -30, -65, -1.31134e-06, 5.73206e-14, -73.5895, 17.988, -24.242)
+
+[node name="Corner" parent="." instance=ExtResource("5_71j4m")]
+transform = Transform3D(60, 0, 0, 0, 60, 0, 0, 0, 60, -27.0307, 6.98208, -5.08015)
+
+[node name="Corner2" parent="." instance=ExtResource("5_71j4m")]
+transform = Transform3D(-12.2389, 0, -79.0583, 0, 80, 0, 79.0583, 0, -12.2389, -28.0395, 7.20214, -33.7011)
+
+[node name="Corner3" parent="." instance=ExtResource("5_71j4m")]
+transform = Transform3D(-16.4376, 0, 57.7045, 0, 60, 0, -57.7045, 0, -16.4376, 18.5147, 6.98208, 2.61564)
+
+[node name="Corner4" parent="." instance=ExtResource("5_71j4m")]
+transform = Transform3D(-76.2129, 0, -24.3226, 0, 80, 0, 24.3226, 0, -76.2129, 28.6963, 7.20214, -29.3697)
+
+[node name="Market" parent="." instance=ExtResource("6_qfnet")]
+transform = Transform3D(-6.74302, 0, -7.38455, 0, 10, 0, 7.38455, 0, -6.74302, 29.7266, 4.47213, -19.6772)
+
+[node name="Market2" parent="." instance=ExtResource("7_i7141")]
+transform = Transform3D(7.38455, 0, -6.74302, 0, 10, 0, 6.74302, 0, 7.38455, -30.2969, 4.81265, -40.2614)
+
+[node name="Market3" parent="." instance=ExtResource("7_i7141")]
+transform = Transform3D(-7.39631, 0, -6.73012, 0, 10, 0, 6.73012, 0, -7.39631, 28.793, 4.72434, -40.5058)

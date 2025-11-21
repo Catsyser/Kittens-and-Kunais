@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://t42aagtha7w5"]
+
+[ext_resource type="PackedScene" uid="uid://bq83chpfm7uye" path="res://assets/assets3D/Market_Stalls.glb" id="1_toftf"]
+
+[node name="Market" type="MeshInstance3D"]
+
+[node name="Root Scene" parent="." instance=ExtResource("1_toftf")]

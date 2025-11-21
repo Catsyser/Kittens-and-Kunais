@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwjbspnr0dvu6"]
+
+[ext_resource type="PackedScene" uid="uid://yukmhvrxbbue" path="res://assets/assets3D/Village_Market.glb" id="1_vc358"]
+
+[node name="Market2" type="MeshInstance3D"]
+
+[node name="Root Scene" parent="." instance=ExtResource("1_vc358")]

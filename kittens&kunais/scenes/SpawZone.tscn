@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dly53poims3up"]
+
+[ext_resource type="Script" uid="uid://c4kallnwitaot" path="res://scripts/spaw_zone.gd" id="1_j2bga"]
+[ext_resource type="PackedScene" uid="uid://dol258blbto3k" path="res://scenes/target.tscn" id="2_qu1aj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_j2bga"]
+
+[node name="SpawZone" type="Marker3D"]
+script = ExtResource("1_j2bga")
+alvo_scene = ExtResource("2_qu1aj")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(18, 0, 0, 0, 4, 0, 0, 0, 0.1, 0, 0, 0)
+visible = false
+layers = 8
+mesh = SubResource("BoxMesh_j2bga")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

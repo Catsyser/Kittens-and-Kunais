@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://3fe38kiorb6v"]
+
+[ext_resource type="PackedScene" uid="uid://bojss8tuwoi7g" path="res://assets/assets3D/cliff_halfCorner_rock.glb" id="1_fb7yc"]
+
+[node name="Corner" type="MeshInstance3D"]
+
+[node name="cliff_halfCorner_rock2" parent="." instance=ExtResource("1_fb7yc")]

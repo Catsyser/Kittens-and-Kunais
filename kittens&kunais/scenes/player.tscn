@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=3 uid="uid://tq5rgqbsdj5q"]
+
+[ext_resource type="Script" uid="uid://tlrdtplac7u2" path="res://scripts/camera_controller.gd" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://mrvysvex01y0" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="PackedScene" uid="uid://bn7prkf1qdp1t" path="res://scenes/kunai.tscn" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://b7avebl2me6r6" path="res://assets/assets2D/strike_sprite.png" id="4_dqkch"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_u8vuu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3vyb7"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_g2els"]
+
+[node name="player" type="CharacterBody3D"]
+script = ExtResource("1_g2els")
+kunai_scene = ExtResource("3_qhqgy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_u8vuu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_3vyb7")
+
+[node name="CameraRoot" type="Node3D" parent="."]
+script = ExtResource("1_3vyb7")
+
+[node name="CameraYaw" type="Node3D" parent="CameraRoot"]
+
+[node name="CameraPìtch" type="Node3D" parent="CameraRoot/CameraYaw"]
+
+[node name="Camera3D" type="Camera3D" parent="CameraRoot/CameraYaw/CameraPìtch"]
+transform = Transform3D(0.987606, -0.0136792, 0.156354, -6.86355e-11, 0.996195, 0.0871557, -0.156952, -0.0860755, 0.983848, 0.889058, 1.74726, 1.75374)
+fov = 92.4292
+
+[node name="RayCast3D" type="RayCast3D" parent="CameraRoot/CameraYaw/CameraPìtch/Camera3D"]
+target_position = Vector3(0, 0, -100)
+collision_mask = 3
+collide_with_areas = true
+
+[node name="aimSpawKunai" type="Marker3D" parent="CameraRoot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.747501, 0.305519, 0.0464655)
+
+[node name="aim_visual" type="Node2D" parent="CameraRoot/aimSpawKunai"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CameraRoot/aimSpawKunai/aim_visual"]
+position = Vector2(575, 325)
+scale = Vector2(4, 4)
+mesh = SubResource("SphereMesh_g2els")
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="UI"]
+offset_left = 16.0
+offset_top = 21.0
+offset_right = 119.0
+offset_bottom = 44.0
+text = "score: "
+
+[node name="strike1" type="Sprite2D" parent="UI"]
+visible = false
+position = Vector2(25, 64)
+scale = Vector2(0.0261111, 0.0261111)
+texture = ExtResource("4_dqkch")
+
+[node name="strike2" type="Sprite2D" parent="UI"]
+visible = false
+position = Vector2(57, 64)
+scale = Vector2(0.0261111, 0.0261111)
+texture = ExtResource("4_dqkch")
+
+[node name="strike3" type="Sprite2D" parent="UI"]
+visible = false
+position = Vector2(89, 64)
+scale = Vector2(0.0261111, 0.0261111)
+texture = ExtResource("4_dqkch")
