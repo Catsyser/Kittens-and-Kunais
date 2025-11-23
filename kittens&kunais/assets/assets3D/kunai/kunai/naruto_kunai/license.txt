@@ -1,0 +1,11 @@
+Model Information:
+* title:	Naruto Kunai
+* source:	https://sketchfab.com/3d-models/naruto-kunai-9652ba2623b84988a8388ebc57332fb3
+* author:	Daniel Ryan (https://sketchfab.com/Dryan5)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Naruto Kunai" (https://sketchfab.com/3d-models/naruto-kunai-9652ba2623b84988a8388ebc57332fb3) by Daniel Ryan (https://sketchfab.com/Dryan5) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

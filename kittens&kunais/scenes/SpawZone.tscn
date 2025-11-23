@@ -1,9 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://dly53poims3up"]
+[gd_scene load_steps=5 format=3 uid="uid://dly53poims3up"]
 
 [ext_resource type="Script" uid="uid://c4kallnwitaot" path="res://scripts/spaw_zone.gd" id="1_j2bga"]
 [ext_resource type="PackedScene" uid="uid://dol258blbto3k" path="res://scenes/target.tscn" id="2_qu1aj"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6umcy"]
+albedo_color = Color(0.803922, 0.65098, 0.470588, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_j2bga"]
+material = SubResource("StandardMaterial3D_6umcy")
 
 [node name="SpawZone" type="Marker3D"]
 script = ExtResource("1_j2bga")

@@ -11,6 +11,7 @@ extends CharacterBody3D
 @onready var strike1 = $UI/strike1
 @onready var strike2 = $UI/strike2
 @onready var strike3 = $UI/strike3
+@onready var victory_UI = $UI/victory
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -19,6 +20,7 @@ func _ready() -> void:
 	score_label.text = "Score: " + str(Global.score)
 	Global.score_changed.connect(_on_score_update)
 	Global.strike_changed.connect(_on_strike_uptade)
+	Global.victory.connect(_on_victory)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -70,7 +72,9 @@ func shoot_kunai():
 	get_tree().root.add_child(kunai)
 	#kunai.global_position = spawn_kunai.global_position #spaw_kunai refers to the marker3D
 	if distance_to_target < 3.0:
-		# Sai da posição da câmera (levemente à frente para não bater na cara do player)
+		# Actually it leaves from the camera, slightly off just to not touch the player
+		#Since its too close and the kunai is too fast, the player dont even notice
+		#--- JUST FOR THE KNOW: each square that you see in the inspector corresponds 1 meter --- #
 		kunai.global_position = camera_raycast.global_position + (camera_raycast.global_transform.basis.z * -0.5)
 	else:
 		# Comportamento normal (Mão)
@@ -91,3 +95,7 @@ func _on_strike_uptade(new_strike):
 		strike3.visible = true
 	else:
 		pass
+
+func _on_victory(new_score):
+	victory_UI.visible = true
+	get_tree().paused = true

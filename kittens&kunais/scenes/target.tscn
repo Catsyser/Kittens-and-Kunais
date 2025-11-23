@@ -1,21 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://dol258blbto3k"]
+[gd_scene load_steps=4 format=3 uid="uid://dol258blbto3k"]
 
 [ext_resource type="Script" uid="uid://puf7skgg3uh5" path="res://scripts/target.gd" id="1_b37e2"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2b72u"]
-albedo_color = Color(1, 0.27, 0.27, 1)
-
-[sub_resource type="SphereMesh" id="SphereMesh_b37e2"]
-material = SubResource("StandardMaterial3D_2b72u")
+[ext_resource type="PackedScene" uid="uid://c1enssbhiv8b2" path="res://assets/assets3D/abelha/abelha/bee_adventure_time/scene.gltf" id="2_b5a2r"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b37e2"]
+size = Vector3(1, 1.46471, 1.7196)
 
 [node name="Target" type="Area3D"]
 collision_layer = 2
 script = ExtResource("1_b37e2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("SphereMesh_b37e2")
+
+[node name="Sketchfab_Scene" parent="MeshInstance3D" instance=ExtResource("2_b5a2r")]
+transform = Transform3D(0.445503, 0, -0.226995, 0, 0.5, 0, 0.226995, 0, 0.445503, -0.00820184, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00690842, -0.0865669)
 shape = SubResource("BoxShape3D_b37e2")

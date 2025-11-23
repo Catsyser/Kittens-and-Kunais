@@ -1,2 +1,13 @@
+res://scenes/assets_scenes/dirt.tscn
 res://scenes/main.tscn
 res://scenes/world.tscn
+res://scenes/assets_scenes/forest.tscn
+res://scenes/assets_scenes/tree_line.tscn
+res://scenes/assets_scenes/bushesandgrass.tscn
+res://scenes/SpawZone.tscn
+res://scenes/target.tscn
+res://scenes/StrikeZone.tscn
+res://scenes/player.tscn
+res://scenes/kunai.tscn
+res://scenes/assets_scenes/stonepath.tscn
+res://scripts/player.gd

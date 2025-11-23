@@ -1,14 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bn7prkf1qdp1t"]
+[gd_scene load_steps=4 format=3 uid="uid://bn7prkf1qdp1t"]
 
 [ext_resource type="Script" uid="uid://dahillyyexn1d" path="res://scripts/kunai.gd" id="1_b1e6p"]
+[ext_resource type="PackedScene" uid="uid://blfcaqs384nf4" path="res://assets/assets3D/kunai/kunai/naruto_kunai/scene.gltf" id="2_4m4iu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b1e6p"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gfwtc"]
-albedo_color = Color(0.595117, 0.52754, 0.824035, 1)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_b1e6p"]
-material = SubResource("StandardMaterial3D_gfwtc")
+size = Vector3(1, 2.22153, 1)
 
 [node name="Kunai" type="Area3D"]
 collision_layer = 4
@@ -16,12 +12,14 @@ collision_mask = 3
 script = ExtResource("1_b1e6p")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, -1.74846e-08, -0.2, 0, 0.4, -8.74228e-09, 0, 0, 0)
+transform = Transform3D(0.2, 0, 0, 0, -1.74846e-08, -0.2, 0, 0.4, -8.74228e-09, 0, 4.46346e-10, -0.0102112)
 shape = SubResource("BoxShape3D_b1e6p")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0)
-mesh = SubResource("CapsuleMesh_b1e6p")
+
+[node name="Sketchfab_Scene" parent="MeshInstance3D" instance=ExtResource("2_4m4iu")]
+transform = Transform3D(0.05, 0, 0, 0, -0.05, -4.37114e-09, 0, 4.37114e-09, -0.05, 0, 2.01781, -8.82012e-08)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

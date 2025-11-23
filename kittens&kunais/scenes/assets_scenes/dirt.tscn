@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccpoym74pdtmg"]
+[gd_scene load_steps=5 format=3 uid="uid://ccpoym74pdtmg"]
 
 [ext_resource type="PackedScene" uid="uid://ds0sr01p64dxo" path="res://assets/assets3D/cliff_rock.glb" id="1_3clry"]
+[ext_resource type="PackedScene" uid="uid://f4b05a0i14ox" path="res://assets/assets3D/RockPathRoundSmall.glb" id="2_kaela"]
+[ext_resource type="PackedScene" uid="uid://bxtin8iyblx7f" path="res://assets/assets3D/Grass.glb" id="3_0chfn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hm13w"]
 size = Vector3(1, 1, 0.174316)
@@ -12,3 +14,69 @@ size = Vector3(1, 1, 0.174316)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.96755e-08, 0.450123, 0.412842)
 shape = SubResource("BoxShape3D_hm13w")
+
+[node name="Root Scene" parent="." instance=ExtResource("2_kaela")]
+transform = Transform3D(0.0939693, 0.034202, 1.49502e-09, 0, -4.37114e-09, 0.1, 0.034202, -0.0939693, -4.10753e-09, -0.0619911, 0.116498, 0.372789)
+
+[node name="Root Scene2" parent="." instance=ExtResource("2_kaela")]
+transform = Transform3D(0.0939693, 0.034202, 1.49502e-09, 0, -4.37114e-09, 0.1, 0.034202, -0.0939693, -4.10753e-09, -0.0619911, 0.555772, 0.372789)
+
+[node name="Root Scene3" parent="." instance=ExtResource("2_kaela")]
+transform = Transform3D(0.0939693, 0.034202, 1.49502e-09, 0, -4.37114e-09, 0.1, 0.034202, -0.0939693, -4.10753e-09, 0.258187, 0.322246, 0.372789)
+
+[node name="Root Scene4" parent="." instance=ExtResource("2_kaela")]
+transform = Transform3D(0.0939693, 0.034202, 1.49502e-09, 0, -4.37114e-09, 0.1, 0.034202, -0.0939693, -4.10753e-09, 0.257888, 0.775587, 0.372789)
+
+[node name="Root Scene5" parent="." instance=ExtResource("3_0chfn")]
+transform = Transform3D(0.0469846, -0.017101, -7.47509e-10, 0, -2.18557e-09, 0.05, -0.017101, -0.0469846, -2.05376e-09, 0.0779446, 0.273875, 0.363591)
+
+[node name="Root Scene6" parent="." instance=ExtResource("3_0chfn")]
+transform = Transform3D(0.0469846, -0.017101, -7.47509e-10, 0, -2.18557e-09, 0.05, -0.017101, -0.0469846, -2.05376e-09, 0.0779446, 0.798956, 0.363591)
+
+[node name="Root Scene7" parent="." instance=ExtResource("3_0chfn")]
+transform = Transform3D(0.0469846, -0.017101, -7.47509e-10, 0, -2.18557e-09, 0.05, -0.017101, -0.0469846, -2.05376e-09, -0.26226, 0.408622, 0.363591)
+
+[node name="Root Scene8" parent="." instance=ExtResource("3_0chfn")]
+transform = Transform3D(0.0469846, -0.017101, -7.47509e-10, 0, -2.18557e-09, 0.05, -0.017101, -0.0469846, -2.05376e-09, 0.428503, 0.0837774, 0.350648)
+
+[node name="Root Scene9" parent="." instance=ExtResource("3_0chfn")]
+transform = Transform3D(0.0469846, -0.017101, -7.47509e-10, 0, -2.18557e-09, 0.05, -0.017101, -0.0469846, -2.05376e-09, -0.270184, 0.868288, 0.363591)
+
+[node name="Root Scene10" parent="." instance=ExtResource("2_kaela")]
+transform = Transform3D(7.64274e-17, 1.74846e-09, -0.06, 0.04, -1.74846e-09, 0, -1.74846e-09, -0.04, -2.62268e-09, 0.49872, 0.954072, 0.332011)
+
+[node name="Root Scene11" parent="." instance=ExtResource("2_kaela")]
+transform = Transform3D(7.64274e-17, 1.74846e-09, -0.06, 0.04, -1.74846e-09, 0, -1.74846e-09, -0.04, -2.62268e-09, 0.416411, 0.954072, 0.332011)
+
+[node name="Root Scene12" parent="." instance=ExtResource("2_kaela")]
+transform = Transform3D(7.64274e-17, 1.74846e-09, -0.06, 0.04, -1.74846e-09, 0, -1.74846e-09, -0.04, -2.62268e-09, 0.338646, 0.954072, 0.332011)
+
+[node name="Root Scene13" parent="." instance=ExtResource("2_kaela")]
+transform = Transform3D(0.00566093, 1.48341e-09, -0.0593961, 0.0395974, -1.9783e-09, 0.0084914, -1.74846e-09, -0.04, -2.62268e-09, 0.258358, 0.954072, 0.332011)
+
+[node name="Root Scene14" parent="." instance=ExtResource("2_kaela")]
+transform = Transform3D(7.64274e-17, 1.74846e-09, -0.06, 0.04, -1.74846e-09, 0, -1.74846e-09, -0.04, -2.62268e-09, 0.166135, 0.954072, 0.332011)
+
+[node name="Root Scene15" parent="." instance=ExtResource("2_kaela")]
+transform = Transform3D(-0.003797, 1.90653e-09, -0.0597291, 0.0398194, -1.57459e-09, -0.0056955, -1.74846e-09, -0.04, -2.62268e-09, 0.085771, 0.954072, 0.332011)
+
+[node name="Root Scene16" parent="." instance=ExtResource("2_kaela")]
+transform = Transform3D(0.00355647, 1.58607e-09, -0.0597624, 0.0398416, -1.89699e-09, 0.0053347, -1.74846e-09, -0.04, -2.62268e-09, -0.00801778, 0.954072, 0.332011)
+
+[node name="Root Scene17" parent="." instance=ExtResource("2_kaela")]
+transform = Transform3D(7.64274e-17, 1.74846e-09, -0.06, 0.04, -1.74846e-09, 0, -1.74846e-09, -0.04, -2.62268e-09, -0.0965782, 0.954072, 0.332011)
+
+[node name="Root Scene18" parent="." instance=ExtResource("2_kaela")]
+transform = Transform3D(-0.00785017, 2.0576e-09, -0.0588332, 0.0392221, -1.37131e-09, -0.0117753, -1.74846e-09, -0.04, -2.62268e-09, -0.182696, 0.954072, 0.332011)
+
+[node name="Root Scene19" parent="." instance=ExtResource("2_kaela")]
+transform = Transform3D(-0.00694524, 2.02548e-09, -0.0590886, 0.0393924, -1.41831e-09, -0.0104179, -1.74846e-09, -0.04, -2.62268e-09, -0.278747, 0.954072, 0.332011)
+
+[node name="Root Scene20" parent="." instance=ExtResource("2_kaela")]
+transform = Transform3D(7.64274e-17, 1.74846e-09, -0.06, 0.04, -1.74846e-09, 0, -1.74846e-09, -0.04, -2.62268e-09, -0.363472, 0.954072, 0.332011)
+
+[node name="Root Scene21" parent="." instance=ExtResource("2_kaela")]
+transform = Transform3D(7.64274e-17, 1.74846e-09, -0.06, 0.04, -1.74846e-09, 0, -1.74846e-09, -0.04, -2.62268e-09, -0.446897, 0.954072, 0.332011)
+
+[node name="Root Scene22" parent="." instance=ExtResource("2_kaela")]
+transform = Transform3D(7.64274e-17, 1.74846e-09, -0.06, 0.04, -1.74846e-09, 0, -1.74846e-09, -0.04, -2.62268e-09, -0.519793, 0.954072, 0.332011)

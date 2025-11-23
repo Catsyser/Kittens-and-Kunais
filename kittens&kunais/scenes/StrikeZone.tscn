@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdqwly0yqeq4j"]
+[gd_scene load_steps=4 format=3 uid="uid://bdqwly0yqeq4j"]
 
 [ext_resource type="Script" uid="uid://ba5hacd6q36q8" path="res://scripts/strike_zone.gd" id="1_1g05o"]
+[ext_resource type="Texture2D" uid="uid://b47no7x1f84w2" path="res://assets/assets2D/defeat_menu.png" id="2_5gl56"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hrchl"]
 
@@ -10,7 +11,13 @@ collision_mask = 2
 script = ExtResource("1_1g05o")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(10, 0, 0, 0, 20, 0, 0, 0, 0.3, 0, 0, 0)
+transform = Transform3D(25, 0, 0, 0, 50, 0, 0, 0, 0.75, 0, 0, 0)
 shape = SubResource("BoxShape3D_hrchl")
+
+[node name="defeat" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(568, 347)
+scale = Vector2(0.467, 0.467)
+texture = ExtResource("2_5gl56")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

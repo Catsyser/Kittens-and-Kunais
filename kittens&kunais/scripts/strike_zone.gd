@@ -7,6 +7,7 @@ extends Area3D
 #-----------------------------------------------#
 
 const MAX_STRIKES : int = 3
+@onready var defeat_UI = $defeat
 
 func _ready():
 	pass
@@ -22,6 +23,7 @@ func _on_area_entered(area):
 
 func game_over():
 	print("GAME OVER")
+	defeat_UI.visible = true
 	# pause
 	get_tree().paused = true
 	#get_tree().reload_current_scene()

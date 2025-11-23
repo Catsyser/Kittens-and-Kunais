@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bee (Adventure Time)
+* source:	https://sketchfab.com/3d-models/bee-adventure-time-b1f559ae511348c2b86316936a74b9f6
+* author:	ENKY (https://sketchfab.com/IENKYI)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bee (Adventure Time)" (https://sketchfab.com/3d-models/bee-adventure-time-b1f559ae511348c2b86316936a74b9f6) by ENKY (https://sketchfab.com/IENKYI) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
